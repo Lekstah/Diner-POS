@@ -1,0 +1,33 @@
+<br/>
+<p/>
+<div style="width: 300px;margin-left: auto; margin-right: auto">
+    {{# if errMsg }}
+    <div class="alert alert-danger" role="alert">
+        {{ errMsg }}
+    </div>
+    {{/if}}
+    {{# if successMsg }}
+        <div class="alert alert-success" role="alert">
+            {{ successMsg }}
+        </div>
+    {{/if}}
+    <form action="/validateLogin" method="post">
+        Username
+        <br/>
+        <input 
+            class="form-control" 
+            id="username" 
+            name="username"
+        />
+        Password
+        <br/>
+        <input 
+            type="password" 
+            class="form-control" 
+            id="password"
+            name="password"
+        />
+        <br/>
+        <input type="submit" value="Login" class="btn btn-primary" style="float: right; background-color: #0084d2">
+    </form>
+</div>

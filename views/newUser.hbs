@@ -1,0 +1,30 @@
+<br/>
+<div class="container-fluid">
+    <h4>Create New Crew</h4>
+    <hr/>
+</div>
+<div style="width: 300px;margin-left: auto; margin-right: auto">
+    {{# if errMsg }}
+    <div class="alert alert-danger" role="alert">
+        {{ errMsg }}
+    </div>
+    {{/if}}
+    {{# if successMsg }}
+        <div class="alert alert-success" role="alert">
+            {{ successMsg }}
+        </div>
+    {{/if}}
+    <form action="/users/createUser" method="post">
+        Username
+        <br/>
+        <input class="form-control" id="userID" name="userID" />
+        Password
+        <br/>
+        <input class="form-control" type="password" id="password" name="password" />
+        Confirm Password
+        <br/>
+        <input class="form-control" type="password" id="confirmPass" name="confirmPass" />
+        <br/>
+        <input type="submit" value="Create New Crew" class="btn btn-primary" style="float: right; background-color: #0084d2">
+    </form>
+</div>

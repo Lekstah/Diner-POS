@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  br
+  p
+  //-p Welcome to #{title}
+  div(style='width: 300px; margin-left: auto; margin-right: auto')
+    form:post(action='#') 
+      |Username
+      br
+      input#username.form-control(
+          onclick='enableField(this)',
+          readonly=true,
+          style='background-color: white')
+      |Password
+      br
+      input#password.form-control(
+          type='password', 
+          onclick='enableField(this)',
+          readonly=true,
+          style='background-color: white')
+      br
+      input(type='submit', value='Login', class='btn btn-primary' style='float: right; background-color: #0084d2')
+      
