@@ -64,6 +64,7 @@ router.get('/changePassword', function(req, res, next){
   }
 });
 
+/* Adjust order of validation */
 router.post('/updatePassword', function(req, res, next){
   if(sessionExists(req, res)){
     if(req.body.newPass != req.body.confirmPass){
